@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E0367241EDD4EF700BE2CDE /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0367231EDD4EF700BE2CDE /* LocationDetailViewController.swift */; };
+		5E05B04C1EDE9E93007FA2C6 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E05B04B1EDE9E93007FA2C6 /* AddLocationViewController.swift */; };
+		5E05B04F1EDEA6FB007FA2C6 /* LocationDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E05B04D1EDEA6FB007FA2C6 /* LocationDataModel.xcdatamodeld */; };
 		5E7B34B31EBA066F00352575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7B34B21EBA066F00352575 /* AppDelegate.swift */; };
 		5E7B34B51EBA066F00352575 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7B34B41EBA066F00352575 /* ViewController.swift */; };
 		5E7B34B81EBA066F00352575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7B34B61EBA066F00352575 /* Main.storyboard */; };
 		5E7B34BA1EBA066F00352575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7B34B91EBA066F00352575 /* Assets.xcassets */; };
 		5E7B34BD1EBA066F00352575 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7B34BB1EBA066F00352575 /* LaunchScreen.storyboard */; };
+		5EF5B1761EDCF36A00638AB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EF5B1751EDCF36A00638AB6 /* GoogleService-Info.plist */; };
+		5EF5B17A1EDCFEEA00638AB6 /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5B1791EDCFEEA00638AB6 /* LocationTableViewController.swift */; };
+		5EFF9DB11EDEB73100896B47 /* DBLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFF9DAF1EDEB73100896B47 /* DBLocation+CoreDataClass.swift */; };
+		5EFF9DB21EDEB73100896B47 /* DBLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFF9DB01EDEB73100896B47 /* DBLocation+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E0367231EDD4EF700BE2CDE /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
+		5E05B04B1EDE9E93007FA2C6 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		5E05B04E1EDEA6FB007FA2C6 /* LocationDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocationDataModel.xcdatamodel; sourceTree = "<group>"; };
 		5E7B34AF1EBA066F00352575 /* My Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Target.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7B34B21EBA066F00352575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E7B34B41EBA066F00352575 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +32,10 @@
 		5E7B34B91EBA066F00352575 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E7B34BC1EBA066F00352575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E7B34BE1EBA066F00352575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EF5B1751EDCF36A00638AB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5EF5B1791EDCFEEA00638AB6 /* LocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
+		5EFF9DAF1EDEB73100896B47 /* DBLocation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DBLocation+CoreDataClass.swift"; path = "My Target/DBLocation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5EFF9DB01EDEB73100896B47 /* DBLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DBLocation+CoreDataProperties.swift"; path = "My Target/DBLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,9 +49,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E05B0541EDEA8AC007FA2C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E05B04D1EDEA6FB007FA2C6 /* LocationDataModel.xcdatamodeld */,
+			);
+			name = Models;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5E05B0551EDEA8C2007FA2C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5E7B34B41EBA066F00352575 /* ViewController.swift */,
+				5EF5B1791EDCFEEA00638AB6 /* LocationTableViewController.swift */,
+				5E0367231EDD4EF700BE2CDE /* LocationDetailViewController.swift */,
+				5E05B04B1EDE9E93007FA2C6 /* AddLocationViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		5E7B34A61EBA066F00352575 = {
 			isa = PBXGroup;
 			children = (
+				5EFF9DAF1EDEB73100896B47 /* DBLocation+CoreDataClass.swift */,
+				5EFF9DB01EDEB73100896B47 /* DBLocation+CoreDataProperties.swift */,
 				5E7B34B11EBA066F00352575 /* My Target */,
 				5E7B34B01EBA066F00352575 /* Products */,
 			);
@@ -54,8 +90,10 @@
 		5E7B34B11EBA066F00352575 /* My Target */ = {
 			isa = PBXGroup;
 			children = (
+				5E05B0551EDEA8C2007FA2C6 /* Controller */,
+				5E05B0541EDEA8AC007FA2C6 /* Models */,
+				5EF5B1751EDCF36A00638AB6 /* GoogleService-Info.plist */,
 				5E7B34B21EBA066F00352575 /* AppDelegate.swift */,
-				5E7B34B41EBA066F00352575 /* ViewController.swift */,
 				5E7B34B61EBA066F00352575 /* Main.storyboard */,
 				5E7B34B91EBA066F00352575 /* Assets.xcassets */,
 				5E7B34BB1EBA066F00352575 /* LaunchScreen.storyboard */,
@@ -124,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E7B34BD1EBA066F00352575 /* LaunchScreen.storyboard in Resources */,
+				5EF5B1761EDCF36A00638AB6 /* GoogleService-Info.plist in Resources */,
 				5E7B34BA1EBA066F00352575 /* Assets.xcassets in Resources */,
 				5E7B34B81EBA066F00352575 /* Main.storyboard in Resources */,
 			);
@@ -136,8 +175,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EFF9DB21EDEB73100896B47 /* DBLocation+CoreDataProperties.swift in Sources */,
+				5EFF9DB11EDEB73100896B47 /* DBLocation+CoreDataClass.swift in Sources */,
 				5E7B34B51EBA066F00352575 /* ViewController.swift in Sources */,
+				5E05B04C1EDE9E93007FA2C6 /* AddLocationViewController.swift in Sources */,
 				5E7B34B31EBA066F00352575 /* AppDelegate.swift in Sources */,
+				5EF5B17A1EDCFEEA00638AB6 /* LocationTableViewController.swift in Sources */,
+				5E0367241EDD4EF700BE2CDE /* LocationDetailViewController.swift in Sources */,
+				5E05B04F1EDEA6FB007FA2C6 /* LocationDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,8 +344,23 @@
 				5E7B34C31EBA066F00352575 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5E05B04D1EDEA6FB007FA2C6 /* LocationDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5E05B04E1EDEA6FB007FA2C6 /* LocationDataModel.xcdatamodel */,
+			);
+			currentVersion = 5E05B04E1EDEA6FB007FA2C6 /* LocationDataModel.xcdatamodel */;
+			name = LocationDataModel.xcdatamodeld;
+			path = "My Target/LocationDataModel.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5E7B34A71EBA066F00352575 /* Project object */;
 }
