@@ -18,17 +18,19 @@ class LocationDetailViewController: UIViewController {
     
     @IBOutlet weak var latlng: UILabel!
     
+    var phonetxt = ""
+    var snippettxt = ""
+    var latlngtxt = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        phone.text = phonetxt
+        snippet.text = snippettxt
+        latlng.text = "12.123134, 105.124244"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
     
 
 

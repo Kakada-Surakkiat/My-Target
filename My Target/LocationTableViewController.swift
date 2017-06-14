@@ -12,7 +12,11 @@ import CoreData
 class LocationTableViewController: UITableViewController {
     
     var locations = [DBLocation]()
-
+    
+    var txtPhone = ""
+    var txtSnippet = ""
+    var txtlatlng = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,18 +46,30 @@ class LocationTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell_location", for: indexPath)
         let location = locations[indexPath.row]
         cell.textLabel?.text = location.name
-        
+        txtPhone = location.phone!
+        txtSnippet = location.snippet!
+//        txtlatlng = location.latitude! + ", " + location.longitude!
         return cell
         
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let data = getDataForRow(indexPath) // <== You need to implement it
-//        self.myDataDelegate?.didSelectRow(indexPath, data: data)
-//        
-//        self.dismissViewControllerAnimated(true, completion: nil)
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell_location", for: indexPath)
+        let location = locations[indexPath.row]
+        
+        print(indexPath.row)
+    }
     
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "a"{
+            let myVC = segue.destination as! LocationDetailViewController
+            myVC.phonetxt = txtPhone
+            myVC.snippettxt = txtSnippet
+        }
+    }
 
 
     func loadLocation()->[DBLocation]{

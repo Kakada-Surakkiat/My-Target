@@ -177,11 +177,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G2l-Hq-yEr" id="m3i-YO-ErQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="if3-nA-m9v">
-                                            <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -190,7 +190,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="rMO-Yv-tVs" kind="show" id="liu-On-ndT"/>
+                                    <segue destination="rMO-Yv-tVs" kind="show" identifier="a" id="liu-On-ndT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -205,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="2913" y="-323"/>
         </scene>
-        <!--Location Detail View Controller-->
+        <!--Location Detail-->
         <scene sceneID="lqi-os-mIS">
             <objects>
-                <viewController id="rMO-Yv-tVs" customClass="LocationDetailViewController" customModule="My_Target" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Location Detail" id="rMO-Yv-tVs" customClass="LocationDetailViewController" customModule="My_Target" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZSG-vJ-jo5"/>
                         <viewControllerLayoutGuide type="bottom" id="Igw-Ie-rZa"/>
@@ -217,7 +217,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjW-gJ-cL3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="e-money" translatesAutoresizingMaskIntoConstraints="NO" id="kjW-gJ-cL3">
                                 <rect key="frame" x="0.0" y="64" width="375" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -243,21 +243,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNV-b3-ynU">
-                                <rect key="frame" x="109" y="269" width="49" height="21"/>
+                                <rect key="frame" x="109" y="269" width="234" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="snippet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYU-kj-GmZ">
-                                <rect key="frame" x="109" y="306" width="57" height="21"/>
+                                <rect key="frame" x="109" y="306" width="234" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="latlng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOR-Rl-g67">
-                                <rect key="frame" x="109" y="343" width="43" height="21"/>
+                                <rect key="frame" x="109" y="343" width="234" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -281,7 +281,7 @@
         <scene sceneID="oL7-sQ-LQo">
             <objects>
                 <navigationController id="ujm-VB-ndY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Location List" id="pLs-nL-xja"/>
+                    <tabBarItem key="tabBarItem" title="Location List" image="ic_near_me" id="pLs-nL-xja"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Amm-9Q-FOM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -346,7 +346,7 @@
         <scene sceneID="RjF-Hl-yQC">
             <objects>
                 <navigationController id="mVL-kg-r0W" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="cDM-mV-jRO"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="ic_map" id="cDM-mV-jRO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JM0-mM-XrI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -363,7 +363,7 @@
         <scene sceneID="ZgM-ZJ-KqW">
             <objects>
                 <navigationController id="r5V-3x-6DL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" id="Cen-Yv-xrk"/>
+                    <tabBarItem key="tabBarItem" title="More" image="ic_more_horiz" id="Cen-Yv-xrk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vqR-s5-DG9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -470,4 +470,10 @@
             <point key="canvasLocation" x="2645.5999999999999" y="1259.8200899550227"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="e-money" width="850" height="567"/>
+        <image name="ic_map" width="24" height="24"/>
+        <image name="ic_more_horiz" width="24" height="24"/>
+        <image name="ic_near_me" width="24" height="24"/>
+    </resources>
 </document>
