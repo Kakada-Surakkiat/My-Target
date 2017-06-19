@@ -87,5 +87,14 @@ class LocationTableViewController: UITableViewController {
         
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let selectCell = sender as! LocationListTableViewCell
+        let indexPath = tableView.indexPath(for: selectCell)!
+        let selectLocation = locations[indexPath.row]
+        
+        let locationDetailViewController = segue.destination as! LocationDetailViewController
+        locationDetailViewController.location = selectLocation
+        
+    }
 
 }

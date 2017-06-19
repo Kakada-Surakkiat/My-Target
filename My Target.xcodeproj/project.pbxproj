@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FCE04DE1EF7F6EE00E36FBC /* LocationListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE04DD1EF7F6EE00E36FBC /* LocationListTableViewCell.swift */; };
 		5E0367241EDD4EF700BE2CDE /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0367231EDD4EF700BE2CDE /* LocationDetailViewController.swift */; };
 		5E05B04C1EDE9E93007FA2C6 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E05B04B1EDE9E93007FA2C6 /* AddLocationViewController.swift */; };
 		5E05B04F1EDEA6FB007FA2C6 /* LocationDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E05B04D1EDEA6FB007FA2C6 /* LocationDataModel.xcdatamodeld */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FCE04DD1EF7F6EE00E36FBC /* LocationListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListTableViewCell.swift; sourceTree = "<group>"; };
 		5E0367231EDD4EF700BE2CDE /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		5E05B04B1EDE9E93007FA2C6 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		5E05B04E1EDEA6FB007FA2C6 /* LocationDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocationDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				5E0367231EDD4EF700BE2CDE /* LocationDetailViewController.swift */,
 				5E05B04B1EDE9E93007FA2C6 /* AddLocationViewController.swift */,
 				5E2EB6361EDEE9C20070CB95 /* TableViewController.swift */,
+				3FCE04DD1EF7F6EE00E36FBC /* LocationListTableViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				5EFF9DB11EDEB73100896B47 /* DBLocation+CoreDataClass.swift in Sources */,
 				5E07AE5C1EF162A10013FE39 /* Location.swift in Sources */,
 				5E7B34B51EBA066F00352575 /* ViewController.swift in Sources */,
+				3FCE04DE1EF7F6EE00E36FBC /* LocationListTableViewCell.swift in Sources */,
 				5E05B04C1EDE9E93007FA2C6 /* AddLocationViewController.swift in Sources */,
 				5E7B34B31EBA066F00352575 /* AppDelegate.swift in Sources */,
 				5EF5B17A1EDCFEEA00638AB6 /* LocationTableViewController.swift in Sources */,

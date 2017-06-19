@@ -17,17 +17,16 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var snippet: UILabel!
     
     @IBOutlet weak var latlng: UILabel!
+  
     
-    var phonetxt = ""
-    var snippettxt = ""
-    var latlngtxt = ""
+    var location: Location!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        phone.text = phonetxt
-        snippet.text = snippettxt
-        latlng.text = "12.123134, 105.124244"
+        phone.text = location.phone
+        snippet.text = location.snippet
+        latlng.text = location.latitude + location.longitude
     }
 
 
