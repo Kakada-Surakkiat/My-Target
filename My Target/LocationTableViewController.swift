@@ -11,7 +11,7 @@ import CoreData
 
 class LocationTableViewController: UITableViewController {
     
-    var locations = [DBLocation]()
+    var locations = [Location]()
     
     var txtPhone = ""
     var txtSnippet = ""
@@ -20,7 +20,8 @@ class LocationTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locations = loadLocation()
+        loadLocation()
+        
 
     }
 
@@ -52,40 +53,38 @@ class LocationTableViewController: UITableViewController {
         return cell
         
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell_location", for: indexPath)
-        let location = locations[indexPath.row]
+
+
+    func loadLocation(){
         
-        print(indexPath.row)
-    }
-    
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let myUrl = "http://192.168.43.194/fe_e-library/explore.php"
         
-        if segue.identifier == "a"{
-            let myVC = segue.destination as! LocationDetailViewController
-            myVC.phonetxt = txtPhone
-            myVC.snippettxt = txtSnippet
+        let url = URL(string:myUrl)!
+        let task = URLSession.shared.dataTask(with: url){(data, response, error) in
+            let jsonObjects = try! JSONSerialization.jsonObject(with: data!, options:[]) as![Any]
+            print(jsonObjects)
+            
+            
+            var locations = [Location]()
+            
+            for item in jsonObjects{
+                let loc = item as! [String:Any]
+                let id = loc["id"] as! String
+                let name = loc["name"] as! String
+                let phone = loc["phone"] as! String
+                let snippet = loc["snippet"] as! String
+                let lat = loc["lat"] as! String
+                let long = loc["long"] as! String
+                let cellLocation = Location(id: id, name: name, phone: phone, snippet: snippet, latitude: lat, longitude: long)
+                locations.append(cellLocation)
+            }
+            
+            self.locations = locations
+            self.tableView.reloadData()
+            
         }
-    }
-
-
-    func loadLocation()->[DBLocation]{
-    
-//        let l1 = DBLocation(name: "Kakada", phone: "095811102", snippet: "My shop is good", latitude: 14.2435235, longitude: 112.1341324, status: 1, lastUpdate: 123415325311)
-//        let l2 = DBLocation(name: "Surakkiat", phone: "093399903", snippet: "My shop is very good", latitude: 14.2435235, longitude: 112.1341324, status: 1, lastUpdate: 123415325311)
-//        let l3 = DBLocation(name: "Rith", phone: "0972202142", snippet: "My shop is beautiful", latitude: 14.2435235, longitude: 112.1341324, status: 1, lastUpdate: 123415325311)
-//        
-//        let locations = [l1, l2, l3]
+        task.resume()
         
-        let request = NSFetchRequest<DBLocation>(entityName: "DBLocation")
-        
-        let locations = try! AppDelegate.context.fetch(request)
-    
-        return locations
-    
     }
 
 
